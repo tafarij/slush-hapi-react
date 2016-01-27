@@ -1,0 +1,10 @@
+{
+    "extends": ["standard", "standard-react"],
+    "env": {
+        "node": true
+    },
+    "rules": {
+        "semi": [2, "always"],
+        "indent": [2, 4]
+    }
+}
