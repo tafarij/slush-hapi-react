@@ -16,6 +16,9 @@ config.devServer = {
     }
 };
 
+// add hot reload for react
+config.module.loaders[0].loaders.unshift('react-hot');
+
 config.module.loaders = config.module.loaders.concat([{
     test: /\.scss$/,
     loader: 'style!css!sass'

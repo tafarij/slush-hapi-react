@@ -7,7 +7,7 @@ const webpack = require('webpack');
 let config = {
     entry: {
         app: path.resolve(__dirname, '../client/src/js/app.jsx'),
-        vendors: ['jquery', 'react', 'react-dom']
+        vendors: ['react', 'react-dom']
     },
     output: {
         filename: '[name].js',
@@ -16,13 +16,10 @@ let config = {
     },
     module: {
         loaders: [{
-            test: /\.jsx?$/, // A regexp to test the require path. accepts either js or jsx
+            test: /\.jsx?$/,
             exclude: [node_modules_dir],
 
-            loader: 'babel', // The module to load. "babel" is short for "babel-loader"
-            query: {
-                presets: ['react', 'es2015']
-            }
+            loaders: ['babel?presets[]=react,presets[]=es2015']
         }]
     },
     plugins: [
