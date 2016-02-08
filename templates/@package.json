@@ -54,7 +54,8 @@
         "sass-loader": "3.x.x",
         "style-loader": "0.x.x",
         "webpack": "1.x.x",
-        "webpack-dev-server": "1.x.x"
+        "webpack-dev-server": "1.x.x",
+        "webpack-split-by-path": "0.0.x"
     },
     "license": "MIT"
 }

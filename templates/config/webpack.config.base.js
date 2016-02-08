@@ -2,12 +2,11 @@
 
 const path = require('path');
 const node_modules_dir = path.resolve(__dirname, '../node_modules');
-const webpack = require('webpack');
+const SplitByPathPlugin = require('webpack-split-by-path');
 
 let config = {
     entry: {
-        app: path.resolve(__dirname, '../client/src/js/app.jsx'),
-        vendors: ['react', 'react-dom']
+        app: path.resolve(__dirname, '../client/src/js/app.jsx')
     },
     output: {
         filename: '[name].js',
@@ -23,7 +22,10 @@ let config = {
         }]
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.min.js')
+        new SplitByPathPlugin([{
+            name: 'vendors',
+            path: path.resolve(__dirname, '../node_modules')
+        }])
     ]
 };
 
