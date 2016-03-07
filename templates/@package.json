@@ -41,6 +41,7 @@
         "css-loader": "0.x.x",
         "eslint": "1.x.x",
         "eslint-config-standard": "4.x.x",
+        "eslint-config-standard-jsx": "1.0.0",
         "eslint-config-standard-react": "1.x.x",
         "eslint-plugin-react": "3.x.x",
         "eslint-plugin-standard": "1.x.x",
